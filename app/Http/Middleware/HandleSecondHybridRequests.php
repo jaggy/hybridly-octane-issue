@@ -14,6 +14,9 @@ class HandleSecondHybridRequests extends Middleware
      */
     public function share()
     {
-        return ['two' => '222'];
+        return [
+            'two' => '222',
+            'lazyTwo' => fn () => '222',
+        ];
     }
 }

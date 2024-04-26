@@ -14,6 +14,9 @@ class HandleHybridRequests extends Middleware
      */
     public function share(): array
     {
-        return ['one' => '111'];
+        return [
+            'one' => '111',
+            'lazyOne' => fn () => '111',
+        ];
     }
 }
